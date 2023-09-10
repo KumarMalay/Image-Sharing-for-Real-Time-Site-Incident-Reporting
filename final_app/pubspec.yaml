@@ -1,0 +1,63 @@
+name: final_app
+description: A new Flutter project.
+
+# Prevent accidental publishing to pub.dev.
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  camera: ^0.10.5+4
+  firebase_auth: ^4.9.0
+  firebase_core: ^2.15.1
+  firebase_storage: ^11.2.6
+  flutter:
+    sdk: flutter
+  flutter_image_compress: ^2.0.4
+  flutter_localizations:
+    sdk: flutter
+  flutter_svg: ^2.0.7
+  http: ^1.1.0
+  image_picker: ^1.0.4
+  intl: ^0.18.1
+  path: ^1.8.3
+  path_provider: ^2.1.1
+  shared_preferences: ^2.2.1
+  sqflite: ^2.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Enable generation of localized Strings from arb files.
+  generate: true
+
+  assets:
+    # Add assets from the images directory to the application.
+    - images/G.png
+    - images/A.png
+    - images/LogOut.jpg
+    - images/cam.png
+    - images/camera.png
+    - images/C1.png
+    - images/C2.png
+    - images/C3.png
+#  fonts:
+#    - family: MontaguSlab
+#      fonts:
+#        - asset: fonts/MontaguSlab_36pt-Bold.ttf
+#        - asset: fonts/MontaguSlab_36pt-ExtraLight.ttf
+#        - asset: fonts/MontaguSlab_36pt-Light.ttf
+#        - asset: fonts/MontaguSlab_36pt-Medium.ttf
+#        - asset: fonts/MontaguSlab_36pt-Regular.ttf
+#        - asset: fonts/MontaguSlab_36pt-SemiBold.ttf
+#        - asset: fonts/MontaguSlab_36pt-Thin.ttf
