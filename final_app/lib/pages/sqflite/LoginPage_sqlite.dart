@@ -1,15 +1,10 @@
-import 'package:final_app/pages/sqflite/HomePageNew.dart';
-import 'package:final_app/pages/sqflite/HomePageSql.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:final_app/compenents/textfield.dart';
-import 'package:final_app/compenents/my_button.dart';
-import 'package:final_app/compenents/squaretile.dart';
 import 'package:path/path.dart';
-import 'package:sqflite/sqflite.dart';
-
-import '../FirebaseCode/Home_page.dart';
+import '../../compenents/my_button.dart';
+import '../../compenents/squaretile.dart';
+import '../../compenents/textfield.dart';
 import 'DatabaseHelper.dart';
+import 'HomePageNew.dart';
 
 class LoginPageSql extends StatefulWidget {
   final Function()? onTap;

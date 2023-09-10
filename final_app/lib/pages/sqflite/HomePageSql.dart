@@ -1,9 +1,8 @@
-import 'dart:io';
-import 'package:final_app/pages/sqflite/authPage_sql.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../Cameras/Camera.dart';
 import 'DatabaseHelper.dart';
+import 'authPage_sql.dart';
 
 class HomePageSql extends StatefulWidget {
   const HomePageSql({super.key});

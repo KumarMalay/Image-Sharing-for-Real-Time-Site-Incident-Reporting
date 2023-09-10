@@ -1,9 +1,9 @@
-import 'package:final_app/pages/sqflite/RegisterPage_sqlite.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../Cameras/Camera.dart';
 import 'DatabaseHelper.dart';
+import 'RegisterPage_sqlite.dart';
 import 'authPage_sql.dart';
 
 class HomePageNew extends StatefulWidget {

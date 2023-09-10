@@ -1,7 +1,7 @@
+import 'package:alpha/pages/Cameras/CameraScreen.dart';
+import 'package:alpha/pages/sqflite/DatabaseHelper.dart';
+import 'package:alpha/pages/sqflite/authPage_sql.dart';
 import 'package:camera/camera.dart';
-import 'package:final_app/pages/Cameras/CameraScreen.dart';
-import 'package:final_app/pages/sqflite/DatabaseHelper.dart';
-import 'package:final_app/pages/sqflite/authPage_sql.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

@@ -1,8 +1,6 @@
-import 'package:final_app/pages/FirebaseCode/login_page.dart';
-import 'package:final_app/pages/FirebaseCode/register_page.dart';
-import 'package:final_app/pages/sqflite/LoginPage_sqlite.dart';
-import 'package:final_app/pages/sqflite/RegisterPage_sqlite.dart';
 import 'package:flutter/material.dart';
+import 'LoginPage_sqlite.dart';
+import 'RegisterPage_sqlite.dart';
 
 class LoginOrRegisterPageSql extends StatefulWidget {
   const LoginOrRegisterPageSql({super.key});

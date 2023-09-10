@@ -1,11 +1,11 @@
-import 'package:final_app/pages/sqflite/HomePageSql.dart';
-import 'package:final_app/pages/sqflite/LoginPage_sqlite.dart';
+
 import 'package:flutter/material.dart';
-import 'package:final_app/compenents/textfield.dart';
-import 'package:final_app/compenents/my_button.dart';
-import 'package:final_app/compenents/squaretile.dart';
+import '../../compenents/my_button.dart';
+import '../../compenents/squaretile.dart';
+import '../../compenents/textfield.dart';
 import 'DatabaseHelper.dart';
 import 'HomePageNew.dart';
+import 'LoginPage_sqlite.dart';
 
 class RegisterPageSql extends StatefulWidget {
   final Function()? onTap;

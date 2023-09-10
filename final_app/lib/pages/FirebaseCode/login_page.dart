@@ -1,8 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:final_app/compenents/textfield.dart';
-import 'package:final_app/compenents/my_button.dart';
-import 'package:final_app/compenents/squaretile.dart';
+
+import '../../compenents/my_button.dart';
+import '../../compenents/squaretile.dart';
+import '../../compenents/textfield.dart';
 
 class LoginPage extends StatefulWidget {
   final Function()? onTap;
