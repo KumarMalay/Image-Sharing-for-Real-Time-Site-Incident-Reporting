@@ -21,9 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      // theme: ThemeData(fontFamily: "MontaguSlab"),
       home: AuthPageSql(),
-      // home: CameraScreen(),
     );
   }
 }
