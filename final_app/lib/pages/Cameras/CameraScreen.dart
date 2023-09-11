@@ -60,7 +60,7 @@ class _CameraScreenState extends State<CameraScreen> {
       // Write the compressed bytes to the permanent location
       await permanentImageFile.writeAsBytes(compressedBytes?.toList() ?? []);
       // Navigate to the CameraViewPage with the permanent image path
-      Navigator.push(
+      Navigator.pushReplacement(
         context,
         MaterialPageRoute(
           builder: (context) => CameraViewPage(path: permanentImagePath),

@@ -32,14 +32,14 @@ app.post('/upload', upload.single('image'), (req, res) => {
 
     const now = new Date();
     const formattedDateTime = now.toISOString().replace(/[-T:.]/g, '');
-    const fileName1 = `IMG_${formattedDateTime}_${pictureCounter}.png`;
+    const fileName1 = `IMG_${formattedDateTime}_${pictureCounter}.json`;
     const fileName2 = `IMG_${formattedDateTime}_${pictureCounter}.jpg`;
 
     const savePath = path.join(__dirname, uploadDirectory, fileName1);
     const savePath2 = path.join(__dirname, uploadDirectory2, fileName2);
 
     const imageInfo = {
-      fileName1,
+      fileName: fileName1,
       description,
       image: imageBuffer.toString('base64'),
     };

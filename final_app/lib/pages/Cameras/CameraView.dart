@@ -42,7 +42,7 @@ class CameraViewPage extends StatelessWidget {
     try {
       // Replace with your server URL
       final Uri serverUri = Uri.parse(
-          'http://192.168.29.87:3000/upload'); // Replace with your actual server URL
+          'http://192.168.139.17:3000/upload'); // Replace with your actual server URL
 
       // Create a multipart request to send both the image and description
       final http.MultipartRequest request =
@@ -84,7 +84,7 @@ class CameraViewPage extends StatelessWidget {
           ),
         );
         showErrorMessage(context,
-            'Image upload failed with status code: ${response.statusCode}');
+            'Image upload failed with status code: ${response.statusCode}! Try Again');
       }
     } catch (e) {
       Navigator.pushReplacement(
