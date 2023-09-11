@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'CustomBottomNavigation.dart';
 import 'HomePageNew.dart';
 import 'LoginOrRegister.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -25,7 +26,7 @@ class _AuthPageSqlState extends State<AuthPageSql> {
           final bool? isLoggedIn = prefs.getBool('isLoggedIn');
           if (isLoggedIn ?? false) {
             // User is logged in, navigate to HomePageNew
-            return HomePageNew();
+            return CustomBottomNaviagtion();
           } else {
             // User is not logged in, show login/register page
             return LoginOrRegisterPageSql();

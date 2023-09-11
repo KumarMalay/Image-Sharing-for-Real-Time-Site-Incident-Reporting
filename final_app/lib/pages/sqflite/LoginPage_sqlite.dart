@@ -3,6 +3,7 @@ import 'package:path/path.dart';
 import '../../compenents/my_button.dart';
 import '../../compenents/squaretile.dart';
 import '../../compenents/textfield.dart';
+import 'CustomBottomNavigation.dart';
 import 'DatabaseHelper.dart';
 import 'HomePageNew.dart';
 
@@ -56,7 +57,7 @@ class _LoginPageSqlState extends State<LoginPageSql> {
         Navigator.pushAndRemoveUntil(
             this.context,
             MaterialPageRoute(
-              builder: (context) => HomePageNew(),
+              builder: (context) => CustomBottomNaviagtion(),
             ),
             (route) => false);
       } else {

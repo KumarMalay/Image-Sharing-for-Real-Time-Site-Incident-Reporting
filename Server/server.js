@@ -12,18 +12,36 @@ const upload = multer({ storage: storage });
 
 // Set the directory where images and descriptions will be saved
 const uploadDirectory = 'ServerImages';
-const uploadDirectory2 = 'ServerImages/ImagesOnly';
 
-// Ensure the upload directory exists
 // Ensure the upload directories exist
 if (!fs.existsSync(uploadDirectory)) {
   fs.mkdirSync(uploadDirectory);
 }
 
-if (!fs.existsSync(uploadDirectory2)) {
-  fs.mkdirSync(uploadDirectory2);
-}
+app.get('/images', (req, res) => {
+  try {
+    // Read the list of image files from the 'ServerImages' directory
+    const imageFiles = fs.readdirSync(uploadDirectory);
 
+    // Create an array to store image and description data
+    const images = [];
+
+    // Read each image file and corresponding JSON file
+    for (const imageFile of imageFiles) {
+      if (imageFile.endsWith('.json')) {
+        const imageFilePath = path.join(uploadDirectory, imageFile);
+        const jsonContent = fs.readFileSync(imageFilePath, 'utf-8');
+        const imageData = JSON.parse(jsonContent);
+        images.push(imageData);
+      }
+    }
+
+    res.status(200).json(images);
+  } catch (error) {
+    console.error('Error fetching images:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
 app.post('/upload', upload.single('image'), (req, res) => {
   try {
@@ -35,8 +53,8 @@ app.post('/upload', upload.single('image'), (req, res) => {
     const fileName1 = `IMG_${formattedDateTime}_${pictureCounter}.json`;
     const fileName2 = `IMG_${formattedDateTime}_${pictureCounter}.jpg`;
 
-    const savePath = path.join(__dirname, uploadDirectory, fileName1);
-    const savePath2 = path.join(__dirname, uploadDirectory2, fileName2);
+    const savePath = path.join(uploadDirectory, fileName1);
+    const savePath2 = path.join(uploadDirectory, fileName2);
 
     const imageInfo = {
       fileName: fileName1,

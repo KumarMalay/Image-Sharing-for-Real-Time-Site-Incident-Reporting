@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import '../sqflite/CustomBottomNavigation.dart';
 import '../sqflite/HomePageNew.dart';
 
 class CameraViewPage extends StatelessWidget {
@@ -42,7 +43,7 @@ class CameraViewPage extends StatelessWidget {
     try {
       // Replace with your server URL
       final Uri serverUri = Uri.parse(
-          'http://192.168.139.17:3000/upload'); // Replace with your actual server URL
+          'http://192.168.29.87:3000/upload'); // Replace with your actual server URL
 
       // Create a multipart request to send both the image and description
       final http.MultipartRequest request =
@@ -70,7 +71,7 @@ class CameraViewPage extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) =>
-                HomePageNew(), // Replace with the actual name of your HomePageNew widget
+                CustomBottomNaviagtion(), // Replace with the actual name of your HomePageNew widget
           ),
         );
         showErrorMessage(context, 'Image uploaded successfully');
@@ -80,7 +81,7 @@ class CameraViewPage extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) =>
-                HomePageNew(), // Replace with the actual name of your HomePageNew widget
+                CustomBottomNaviagtion(), // Replace with the actual name of your HomePageNew widget
           ),
         );
         showErrorMessage(context,
@@ -91,7 +92,7 @@ class CameraViewPage extends StatelessWidget {
         context,
         MaterialPageRoute(
           builder: (context) =>
-              HomePageNew(), // Replace with the actual name of your HomePageNew widget
+              CustomBottomNaviagtion(), // Replace with the actual name of your HomePageNew widget
         ),
       );
       // Handle any exceptions or errors here

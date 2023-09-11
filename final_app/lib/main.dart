@@ -11,7 +11,6 @@ Future<void> main() async {
   final databaseHelper = DatabaseHelper();
   await databaseHelper.initializeDatabase();
   final prefs = await SharedPreferences.getInstance();
-  var isLoggedIn = (prefs.getBool('isLoggedIn') == null) ? false : prefs.getBool('isLoggedIn');
   runApp(const MyApp());
 }
 

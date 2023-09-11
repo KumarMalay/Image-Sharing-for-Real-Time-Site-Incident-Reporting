@@ -21,7 +21,6 @@ class _HomePageNewState extends State<HomePageNew> {
   @override
   void initState() {
     super.initState();
-    // checkLoginState();
   }
 
   void signUserOut() async {
@@ -38,42 +37,6 @@ class _HomePageNewState extends State<HomePageNew> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue.shade700,
-      bottomNavigationBar: Container(
-        height: 55,
-        child: BottomNavigationBar(
-          elevation: 0.0,
-          backgroundColor: Colors.blue.shade700,
-          items: [
-            BottomNavigationBarItem(
-                icon: GestureDetector(
-                  onTap: () {
-                    setState(() {});
-                  },
-                  child: Icon(
-                    Icons.home,
-                    color: Colors.white,
-                  ),
-                ),
-                label: ''),
-            BottomNavigationBarItem(
-                icon: GestureDetector(
-                  onTap: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => RegisterPageSql(),
-                      ),
-                    );
-                  },
-                  child: Icon(
-                    Icons.person,
-                    color: Colors.white,
-                  ),
-                ),
-                label: ''),
-          ],
-        ),
-      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -145,11 +108,11 @@ class _HomePageNewState extends State<HomePageNew> {
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
                       color: Colors.transparent,
-                      width: 3,
+                      width: 1,
                     ),
                   ),
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 10, vertical: 15),
                   child: const Column(
                     children: [
                       Row(
@@ -176,119 +139,91 @@ class _HomePageNewState extends State<HomePageNew> {
               const SizedBox(
                 height: 15,
               ),
-              Container(
-                alignment: Alignment.center,
+              Padding(
+                padding: const EdgeInsets.all(15.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.blue.shade600,
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(35),
                     border: Border.all(
-                      color: Colors.transparent,
-                      width: 2,
+                      color: Colors.white, // Specify the border color here
+                      width: 1, // Adjust the border width as needed
                     ),
                   ),
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                  width: 330,
-                  child: const Row(
-                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Icon(
-                        Icons.search,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        "Search",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(35),
-                  child: Container(
-                    height: 530,
-                    color: Colors.blue.shade800,
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text("Tiles",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 24,
-                                        color: Colors.white)),
-                                Icon(
-                                  Icons.more_horiz,
-                                  color: Colors.white,
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            Container(
-                              height: 90,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.blue.shade600,
-                                border: Border.all(
-                                  color: Colors.transparent,
-                                ),
-                              ),
-                              child: Align(
-                                alignment: Alignment.center,
-                                child: GestureDetector(
-                                  onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => CameraPage(),
-                                      ),
-                                    );
-                                  },
-                                  child: ListTile(
-                                    leading: Icon(
-                                      color: Colors.white,
-                                      Icons.linked_camera_outlined,
-                                      size: 35,
-                                    ),
-                                    title: Text(
-                                      "Capture",
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(35),
+                    child: Container(
+                      height: 570,
+                      color: Colors.blue.shade800,
+                      child: Center(
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text("Upload",
                                       style: TextStyle(
-                                          color: Colors.white,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 20),
-                                    ),
-                                    subtitle: Text(
-                                      "Take a Picture",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.normal,
-                                          fontSize: 15),
+                                          fontSize: 24,
+                                          color: Colors.white)),
+                                  Icon(
+                                    Icons.more_horiz,
+                                    color: Colors.white,
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Container(
+                                height: 90,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: Colors.blue.shade600,
+                                  border: Border.all(
+                                    color: Colors.transparent,
+                                  ),
+                                ),
+                                child: Align(
+                                  alignment: Alignment.center,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              CameraPage(),
+                                        ),
+                                      );
+                                    },
+                                    child: ListTile(
+                                      leading: Icon(
+                                        color: Colors.white,
+                                        Icons.linked_camera_outlined,
+                                        size: 35,
+                                      ),
+                                      title: Text(
+                                        "Capture",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 20),
+                                      ),
+                                      subtitle: Text(
+                                        "Take a Picture",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.normal,
+                                            fontSize: 15),
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            )
-                          ],
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
