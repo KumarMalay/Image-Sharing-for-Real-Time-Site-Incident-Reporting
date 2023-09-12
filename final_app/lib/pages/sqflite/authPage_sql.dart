@@ -9,7 +9,7 @@ class AuthPageSql extends StatefulWidget {
 
 class _AuthPageSqlState extends State<AuthPageSql> {
   // Replace this boolean with your actual login state logic
-  bool isLoggedIn = true;
+  bool isLoggedIn = false;
 
   @override
   void initState() {

@@ -4,7 +4,6 @@ import '../../compenents/my_button.dart';
 import '../../compenents/squaretile.dart';
 import '../../compenents/textfield.dart';
 import 'DatabaseHelper.dart';
-import 'HomePageNew.dart';
 import 'LoginPage_sqlite.dart';
 
 class RegisterPageSql extends StatefulWidget {

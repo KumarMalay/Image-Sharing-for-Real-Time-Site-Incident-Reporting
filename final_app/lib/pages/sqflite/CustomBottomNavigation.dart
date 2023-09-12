@@ -2,7 +2,6 @@ import 'package:alpha/pages/sqflite/HomePageNew.dart';
 import 'package:flutter/material.dart';
 
 import 'HomePageNew_2.dart';
-import 'RegisterPage_sqlite.dart';
 
 class CustomBottomNaviagtion extends StatefulWidget {
   const CustomBottomNaviagtion({super.key});

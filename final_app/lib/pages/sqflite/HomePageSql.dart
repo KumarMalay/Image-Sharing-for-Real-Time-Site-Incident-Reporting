@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import '../Cameras/Camera.dart';
 import 'DatabaseHelper.dart';
 import 'authPage_sql.dart';

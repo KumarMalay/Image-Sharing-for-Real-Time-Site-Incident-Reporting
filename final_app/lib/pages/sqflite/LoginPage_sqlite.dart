@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:path/path.dart';
 import '../../compenents/my_button.dart';
 import '../../compenents/squaretile.dart';
 import '../../compenents/textfield.dart';
 import 'CustomBottomNavigation.dart';
 import 'DatabaseHelper.dart';
-import 'HomePageNew.dart';
 
 class LoginPageSql extends StatefulWidget {
   final Function()? onTap;
