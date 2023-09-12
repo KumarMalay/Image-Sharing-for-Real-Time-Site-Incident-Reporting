@@ -29,7 +29,7 @@ class _HomePageNew2State extends State<HomePageNew2> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => const AuthPageSql(),
+        builder: (context) => AuthPageSql(),
       ),
     );
   }
@@ -37,7 +37,7 @@ class _HomePageNew2State extends State<HomePageNew2> {
   Future<void> fetchImagesFromServer() async {
     try {
       final response = await http.get(Uri.parse(
-          'http://192.168.29.87:3000/images')); // Replace with your server URL
+          'http://192.168.139.17:3000/images')); // Replace with your server URL
       if (response.statusCode == 200) {
         // Images fetched successfully
         final List<dynamic> imageList = json.decode(response.body);

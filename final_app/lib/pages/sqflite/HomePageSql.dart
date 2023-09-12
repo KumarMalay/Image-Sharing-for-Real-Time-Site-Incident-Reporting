@@ -25,7 +25,7 @@ class _HomePageSqlState extends State<HomePageSql> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => const AuthPageSql(),
+        builder: (context) => AuthPageSql(),
       ),
     );
   }
